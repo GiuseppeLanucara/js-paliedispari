@@ -2,18 +2,38 @@
 Chiedere all’utente di inserire una parola
 Creare una funzione per capire se la parola inserita è palindroma. */
 
-const parolaUtente = prompt("Ciao dimmi una parola a caso.")
-console.log(parolaUtente);
+let parolaUtente = [];
+parolaUtente = prompt ("Scrivi una parola qualsiasi");
+let parolaNormale = [];
+let parolaContrario = [];
+
+if (parolaPalindroma(parolaUtente)) {
+    console.log("La parola è palindroma");
+    alert("La parola è palindroma")
+} else {
+    console.log("La parola non è palindroma ");
+    alert("La parola non è palindroma")
+}
+
 
 /**
- * Description Questa funzione controlla se la parola inserita è palindroma
- * @param {string} lettereParola parola da controllare
- * @returns {string} ritorna la scritta palindroma o non palindroma
+ * Description: La funzione controlla se la parola è palindroma 
+ * @param {string} parolaDaControllare parola da controllare 
+ * @returns {boolean} è palindroma
  */
- function parolaPalindroma (lettereParola) {
-    let i = 0;
-    let f = parolaUtente.length - 1;
+//                          8
+function parolaPalindroma(parolaDaControllare) {
+    let ePalindroma = false;
+    parolaNormale = parolaDaControllare;
 
-    if ((parola[i]) === (parola[f])) {
-        alert("e palindorma")
-    }}
+    for (let j = parolaDaControllare.length - 1; j >= 0; j--) {
+        parolaContrario += parolaDaControllare[j];
+    }
+
+    if (parolaNormale === parolaContrario) {
+        ePalindroma = true;
+    } else {
+        ePalindroma = false;
+    }
+    return ePalindroma
+}
