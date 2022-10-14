@@ -14,5 +14,6 @@ console.log(parolaUtente);
     let i = 0;
     let f = parolaUtente.length - 1;
 
-    while (i= parolaUtente.length) {
-        i++;
+    if ((parola[i]) === (parola[f])) {
+        alert("e palindorma")
+    }}
