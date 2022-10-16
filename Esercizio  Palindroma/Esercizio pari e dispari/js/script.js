@@ -11,11 +11,33 @@ console.log(pariDispari);
 const numeroUtente = parseInt(prompt("Inserisci un numero da 1 a 5"));
 console.log(numeroUtente, typeof(numeroUtente));
 
+const numeroComputer = numeroRandom()
+console.log(numeroComputer);
 
 
 function numeroRandom(numeroPC) {
  numeroPC=  parseInt(Math.ceil(Math.random() * 6));
+ return numeroPC
 }
 
 const result = numeroUtente + numeroComputer
 console.log(result);
+
+const risultatoPariDispari = sommaPariDispari(result)
+console.log(result);
+
+function sommaPariDispari(tipoNumero) {
+    if ((tipoNumero % 2 == 0)) {
+        alert("La somma dei numeri è pari")
+    } else {
+        alert("La somma è dispari")
+    }
+}
+
+const vincitore = risultatoPariDispari 
+
+if (risultatoPariDispari = pariDispari ) {
+    alert("Utente ha vinto")
+} else {
+    alert ("utente ha perso")
+}
