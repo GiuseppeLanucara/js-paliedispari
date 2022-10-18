@@ -5,39 +5,22 @@
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.
 
-const pariDispari = prompt("Dimmi pari o dispari")
-console.log(pariDispari);
-
-const numeroUtente = parseInt(prompt("Inserisci un numero da 1 a 5"));
-console.log(numeroUtente, typeof(numeroUtente));
-
-const numeroComputer = numeroRandom()
-console.log(numeroComputer);
+let scelta = prompt("scegli pari o dispari");
+let sceltaNum = parseInt(prompt("scegli un numero da 1 a 5"));
+let computerNum = Math.floor(Math.random() * 5)+1;
+let tot = sceltaNum + computerNum;
 
 
-function numeroRandom(numeroPC) {
- numeroPC=  parseInt(Math.ceil(Math.random() * 6));
- return numeroPC
-}
 
-const result = numeroUtente + numeroComputer
-console.log(result);
-
-const risultatoPariDispari = sommaPariDispari(result)
-console.log(result);
-
-function sommaPariDispari(tipoNumero) {
-    if ((tipoNumero % 2 == 0)) {
-        alert("La somma dei numeri è pari")
-    } else {
-        alert("La somma è dispari")
-    }
-}
-
-const vincitore = risultatoPariDispari 
-
-if (risultatoPariDispari = pariDispari ) {
-    alert("Utente ha vinto")
-} else {
-    alert ("utente ha perso")
-}
+function myFunction(){
+   if(tot%2==0 && scelta=="pari"){
+      return ("pari!, HAI VINTO")
+   }else if(tot%2!=0 && scelta=="pari"){
+       return ("dispari! HAI PERSO")
+   }else if(tot%2!=0 && scelta=="dispari"){
+       return("dispari! HAI VINTO")
+   }else if(tot%2==0 && scelta=="dispari"){
+       return("pari! HAI PERSO")
+   }
+};
+document.writeln(scelta,' ',sceltaNum,' ',computerNum,' ',tot,' ',myFunction());
